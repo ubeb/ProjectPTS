@@ -1,5 +1,7 @@
+import 'package:state_management/SplashScreen.dart';
 import 'home.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("List Product"),
-        ),
-        body: Home(),
+        body: SplashScreen(),
       ),
     );
   }
