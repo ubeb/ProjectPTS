@@ -1,5 +1,5 @@
 import 'dart:developer';
-
+import 'home.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,6 +8,7 @@ import 'package:state/addpage.dart';
 import 'package:state/listpage.dart';
 import 'package:state/setting_.dart';
 import 'package:state/use_page.dart';
+import 'package:state/SplashScreen.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,10 +34,11 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<SettingCubit, ThemeData>(
         builder: (context, theme) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
-            theme: theme,
-            home: ListPage(),
+            debugShowCheckedModeBanner: false,
+            home: Scaffold(
+              body: SplashScreen(),
+            )
           );
         },
       ),
