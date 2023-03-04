@@ -1,3 +1,8 @@
+import 'package:state_management/LoginScreen.dart';
+import 'package:state_management/RegisterScreen.dart';
+import 'package:state_management/authentication.dart';
+import 'package:state_management/user_page.dart';
+import 'profile.dart';
 import 'controller.dart';
 import 'total_page.dart';
 import 'package:flutter/material.dart';
@@ -186,7 +191,22 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => UserPage()));
+                },
+                child: Text("User Profile")),
+            ElevatedButton(
+                onPressed: () {
+                  AuthenticationHelper()
+                      .signOut()
+                      .then((_) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen())));
+                },
+                child: Text("SIGN OUT")
+            ),
+
+
           ],
         ),
       ),

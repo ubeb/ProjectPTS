@@ -1,12 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:state_management/Home.dart';
 import 'package:state_management/LoginScreen.dart';
+import 'package:state_management/authentication.dart';
 
 import 'Theme_Helper.dart';
 
 class RegisterScreen extends StatelessWidget {
-
   Key _formkey = GlobalKey<FormState>();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _pass = TextEditingController();
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -51,15 +55,17 @@ class RegisterScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextField(
+                    controller: _email,
                     decoration: ThemeHelper().TextInputDecoration("Email"),
+
                   ),
                   SizedBox(height: 20.0),
                   TextField(
-                    obscureText: true,
                     decoration: ThemeHelper().TextInputDecoration("Username"),
                   ),
                   SizedBox(height: 20.0),
                   TextField(
+                    controller: _pass,
                     obscureText: true,
                     decoration: ThemeHelper().TextInputDecoration("Password"),
                   ),
@@ -82,7 +88,19 @@ class RegisterScreen extends StatelessWidget {
                         child: Text("Sign Up", style: TextStyle(color: Colors.white),),
                       ),
                       onPressed: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                        AuthenticationHelper()
+                            .signUp(email: _email.text, password: _pass.text)
+                            .then((result) => {
+                              if(result == null) {
+                                Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (context) => Home())
+                                )
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                    content: Text(result!, style: TextStyle(fontSize: 16),)
+                                ))
+                              }
+                        });
                       },
                     ),
 
@@ -124,4 +142,5 @@ class RegisterScreen extends StatelessWidget {
       ),
     );
   }
+
 }

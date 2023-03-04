@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:state_management/authentication.dart';
+import 'package:state_management/user_page.dart';
 import 'RegisterScreen.dart';
 import 'package:state_management/home.dart';
 
@@ -7,6 +9,9 @@ import 'Theme_Helper.dart';
 
 class LoginScreen extends StatelessWidget {
   Key _formkey = GlobalKey<FormState>();
+  final _email = TextEditingController();
+  final _pass = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +56,13 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextField(
-                    decoration: ThemeHelper().TextInputDecoration("Username"),
+                    controller: _email,
+                    decoration: ThemeHelper().TextInputDecoration("Email"),
                   ),
                   SizedBox(height: 20.0),
                   TextField(
                     obscureText: true,
+                    controller: _pass,
                     decoration: ThemeHelper().TextInputDecoration("Password"),
                   ),
                   SizedBox(height: 15.0),
@@ -76,8 +83,20 @@ class LoginScreen extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(25, 5, 25, 5),
                         child: Text("Sign In", style: TextStyle(color: Colors.white),),
                       ),
-                      onPressed: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+                      onPressed: () {
+                        AuthenticationHelper()
+                            .signIn(email: _email.text, password: _pass.text)
+                            .then((result) => {
+                          if (result == null) {
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (context) => Home())
+                            )
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text(result!, style: TextStyle(fontSize: 16),)
+                            ))
+                          }
+                        });
                       },
                     ),
 

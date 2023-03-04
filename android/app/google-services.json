@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "322936128339",
+    "project_id": "pts-login-7a2c1",
+    "storage_bucket": "pts-login-7a2c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322936128339:android:4b271e1019ec50eeb397a6",
+        "android_client_info": {
+          "package_name": "com.example.state_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322936128339-kje7gtlqeieuudgp048e5vfm1nusmqd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt2cywQtpIyLAd3_wRETDV3Q7bgU27I4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322936128339-kje7gtlqeieuudgp048e5vfm1nusmqd6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322936128339-k7tskrbbfuc6n2mekp8cddbg66tderff.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.stateManagement"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
