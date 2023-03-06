@@ -1,4 +1,4 @@
-import 'package:state/main.dart';
+import 'package:state_management/main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

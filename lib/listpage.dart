@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:state/setting_.dart';
-import 'package:state/setting_page.dart';
+import 'package:state_management/setting_.dart';
+import 'package:state_management/setting_page.dart';
 
 import 'addpage.dart';
 import 'editpage.dart';
