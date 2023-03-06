@@ -44,39 +44,44 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCbZGaWE3bqKkLfwulG8fJ1rNW2FZjArEQ',
-    appId: '1:1047636452234:web:3a4d4d318472ae24609e73',
-    messagingSenderId: '1047636452234',
-    projectId: 'contact-crud-13e44',
-    authDomain: 'contact-crud-13e44.firebaseapp.com',
-    storageBucket: 'contact-crud-13e44.appspot.com',
+
+    apiKey: 'AIzaSyDe35CICiAR-j9F819msEB5Baw9c1xFKP8',
+    appId: '1:322936128339:web:33bfcef64a14086cb397a6',
+    messagingSenderId: '322936128339',
+    projectId: 'pts-login-7a2c1',
+    authDomain: 'pts-login-7a2c1.firebaseapp.com',
+    storageBucket: 'pts-login-7a2c1.appspot.com',
+    measurementId: 'G-ZC03GBENE6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDVtgygKJ_j6a2nauscfO_Zl6GMvtyvShI',
-    appId: '1:1047636452234:android:632fccbc67947fbe609e73',
-    messagingSenderId: '1047636452234',
-    projectId: 'contact-crud-13e44',
-    storageBucket: 'contact-crud-13e44.appspot.com',
+    apiKey: 'AIzaSyDt2cywQtpIyLAd3_wRETDV3Q7bgU27I4s',
+    appId: '1:322936128339:android:4b271e1019ec50eeb397a6',
+    messagingSenderId: '322936128339',
+    projectId: 'pts-login-7a2c1',
+    storageBucket: 'pts-login-7a2c1.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDs7O3rPSgLtoDTZoywz6M45VSo8l6oaeI',
-    appId: '1:1047636452234:ios:6ff0950f8e14a3e7609e73',
-    messagingSenderId: '1047636452234',
-    projectId: 'contact-crud-13e44',
-    storageBucket: 'contact-crud-13e44.appspot.com',
-    iosClientId: '1047636452234-h9l7qptq1fuc1p2lmre3pt415kqol60i.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDijP-EbUdxHuXYZxY4QydnRvi4hnchcYc',
+    appId: '1:322936128339:ios:57b99711c3b7030bb397a6',
+    messagingSenderId: '322936128339',
+    projectId: 'pts-login-7a2c1',
+    storageBucket: 'pts-login-7a2c1.appspot.com',
+    iosClientId: '322936128339-k7tskrbbfuc6n2mekp8cddbg66tderff.apps.googleusercontent.com',
+
     iosBundleId: 'com.example.stateManagement',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDs7O3rPSgLtoDTZoywz6M45VSo8l6oaeI',
-    appId: '1:1047636452234:ios:6ff0950f8e14a3e7609e73',
-    messagingSenderId: '1047636452234',
-    projectId: 'contact-crud-13e44',
-    storageBucket: 'contact-crud-13e44.appspot.com',
-    iosClientId: '1047636452234-h9l7qptq1fuc1p2lmre3pt415kqol60i.apps.googleusercontent.com',
+
+    apiKey: 'AIzaSyDijP-EbUdxHuXYZxY4QydnRvi4hnchcYc',
+    appId: '1:322936128339:ios:57b99711c3b7030bb397a6',
+    messagingSenderId: '322936128339',
+    projectId: 'pts-login-7a2c1',
+    storageBucket: 'pts-login-7a2c1.appspot.com',
+    iosClientId: '322936128339-k7tskrbbfuc6n2mekp8cddbg66tderff.apps.googleusercontent.com',
+
     iosBundleId: 'com.example.stateManagement',
   );
 }
