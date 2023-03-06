@@ -44,6 +44,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
+
     apiKey: 'AIzaSyDe35CICiAR-j9F819msEB5Baw9c1xFKP8',
     appId: '1:322936128339:web:33bfcef64a14086cb397a6',
     messagingSenderId: '322936128339',
@@ -68,16 +69,19 @@ class DefaultFirebaseOptions {
     projectId: 'pts-login-7a2c1',
     storageBucket: 'pts-login-7a2c1.appspot.com',
     iosClientId: '322936128339-k7tskrbbfuc6n2mekp8cddbg66tderff.apps.googleusercontent.com',
+
     iosBundleId: 'com.example.stateManagement',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
+
     apiKey: 'AIzaSyDijP-EbUdxHuXYZxY4QydnRvi4hnchcYc',
     appId: '1:322936128339:ios:57b99711c3b7030bb397a6',
     messagingSenderId: '322936128339',
     projectId: 'pts-login-7a2c1',
     storageBucket: 'pts-login-7a2c1.appspot.com',
     iosClientId: '322936128339-k7tskrbbfuc6n2mekp8cddbg66tderff.apps.googleusercontent.com',
+
     iosBundleId: 'com.example.stateManagement',
   );
 }

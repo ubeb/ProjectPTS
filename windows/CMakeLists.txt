@@ -1,10 +1,18 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
+<<<<<<< HEAD
+project(state LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "state")
+=======
 project(state_management LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "state_management")
+>>>>>>> 8b5b22a2502efa6bf3d95ad78b3763254fc70677
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
